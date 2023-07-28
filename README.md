@@ -45,7 +45,7 @@ The model can accept many parameters for the run. Here the run number is given, 
 With 'streams_inc', all the vertices are predicted using queries for all the streams. You can use the visualize_results.ipynb to see the results after they are saved. 
 
 Results from a sample run for subj 1:
-<img src="https://raw.githubusercontent.com/Hosseinadeli/algonauts2023_transformers/tree/main/figures/exp_paradigm.png" width = 350> 
+<img src="https://raw.githubusercontent.com/Hosseinadeli/algonauts2023_transformers/main/figures/detr_dino_1_streams_inc_16.png" width = 600> 
 
 ## Behavioral paradigm and datasets: 
 
