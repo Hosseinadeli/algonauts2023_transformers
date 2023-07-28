@@ -2,15 +2,16 @@
 
 Our submission for the [Algonauts 2023 challenge](http://algonauts.csail.mit.edu/challenge.html). 
 
-[Leaderboard](https://codalab.lisn.upsaclay.fr/competitions/9304#results) 
-Username: hosseinadeli
+[Challenge Leaderboard](https://codalab.lisn.upsaclay.fr/competitions/9304#results) 
 
-<img src="https://raw.githubusercontent.com/Hosseinadeli/affinity_attention/main/figures/sample_model_outputs/70158.png" width = 750>
+username: hosseinadeli
 
 
 ### Citing our work
 
 Report to be published soon
+
+Adeli, H., Sun, M., Kriegeskorte, N.
 
 <!---
 
@@ -44,7 +45,7 @@ The model can accept many parameters for the run. Here the run number is given, 
 With 'streams_inc', all the vertices are predicted using queries for all the streams. You can use the visualize_results.ipynb to see the results after they are saved. 
 
 Results from a sample run for subj 1:
-<img src="https://raw.githubusercontent.com/Hosseinadeli/affinity_attention/main/figures/human_behavior/exp_paradigm.png" width = 350> 
+<img src="https://raw.githubusercontent.com/Hosseinadeli/algonauts2023_transformers/tree/main/figures/exp_paradigm.png" width = 350> 
 
 ## Behavioral paradigm and datasets: 
 
