@@ -1,6 +1,6 @@
 # Under construction 
 
-Our submission for the [Algonauts 2023 challenge](http://algonauts.csail.mit.edu/challenge.html). 
+Our submission to the [Algonauts 2023 challenge](http://algonauts.csail.mit.edu/challenge.html). 
 
 [Challenge Leaderboard](https://codalab.lisn.upsaclay.fr/competitions/9304#results) 
 
@@ -30,7 +30,7 @@ Please cite our work by using the following BibTeX entry.
 ``` 
 Comments are Fun --->
  
-[Hossein Adeli](https://hosseinadeli.github.io/)
+[Hossein Adeli](https://hosseinadeli.github.io/)\\
 ha2366@columbia.edu
 
 ## Training the model
