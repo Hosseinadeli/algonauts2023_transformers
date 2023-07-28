@@ -1,265 +1,157 @@
-**DE⫶TR**: End-to-End Object Detection with Transformers
-========
-PyTorch training code and pretrained models for **DETR** (**DE**tection **TR**ansformer).
-We replace the full complex hand-crafted object detection pipeline with a Transformer, and match Faster R-CNN with a ResNet-50, obtaining **42 AP** on COCO using half the computation power (FLOPs) and the same number of parameters. Inference in 50 lines of PyTorch.
+# Under construction 
 
-![DETR](.github/DETR.png)
+Our submission for the [Algonauts 2023 challenge](http://algonauts.csail.mit.edu/challenge.html). 
 
-**What it is**. Unlike traditional computer vision techniques, DETR approaches object detection as a direct set prediction problem. It consists of a set-based global loss, which forces unique predictions via bipartite matching, and a Transformer encoder-decoder architecture. 
-Given a fixed small set of learned object queries, DETR reasons about the relations of the objects and the global image context to directly output the final set of predictions in parallel. Due to this parallel nature, DETR is very fast and efficient.
+[Leaderboard](https://codalab.lisn.upsaclay.fr/competitions/9304#results) 
+Username: hosseinadeli
 
-**About the code**. We believe that object detection should not be more difficult than classification,
-and should not require complex libraries for training and inference.
-DETR is very simple to implement and experiment with, and we provide a
-[standalone Colab Notebook](https://colab.research.google.com/github/facebookresearch/detr/blob/colab/notebooks/detr_demo.ipynb)
-showing how to do inference with DETR in only a few lines of PyTorch code.
-Training code follows this idea - it is not a library,
-but simply a [main.py](main.py) importing model and criterion
-definitions with standard training loops.
+<img src="https://raw.githubusercontent.com/Hosseinadeli/affinity_attention/main/figures/sample_model_outputs/70158.png" width = 750>
 
-Additionnally, we provide a Detectron2 wrapper in the d2/ folder. See the readme there for more information.
 
-For details see [End-to-End Object Detection with Transformers](https://ai.facebook.com/research/publications/end-to-end-object-detection-with-transformers) by Nicolas Carion, Francisco Massa, Gabriel Synnaeve, Nicolas Usunier, Alexander Kirillov, and Sergey Zagoruyko.
+### Citing our work
 
-# Model Zoo
-We provide baseline DETR and DETR-DC5 models, and plan to include more in future.
-AP is computed on COCO 2017 val5k, and inference time is over the first 100 val5k COCO images,
-with torchscript transformer.
+Report to be published soon
 
-<table>
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>backbone</th>
-      <th>schedule</th>
-      <th>inf_time</th>
-      <th>box AP</th>
-      <th>url</th>
-      <th>size</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>DETR</td>
-      <td>R50</td>
-      <td>500</td>
-      <td>0.036</td>
-      <td>42.0</td>
-      <td><a href="https://dl.fbaipublicfiles.com/detr/detr-r50-e632da11.pth">model</a>&nbsp;|&nbsp;<a href="https://dl.fbaipublicfiles.com/detr/logs/detr-r50_log.txt">logs</a></td>
-      <td>159Mb</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>DETR-DC5</td>
-      <td>R50</td>
-      <td>500</td>
-      <td>0.083</td>
-      <td>43.3</td>
-      <td><a href="https://dl.fbaipublicfiles.com/detr/detr-r50-dc5-f0fb7ef5.pth">model</a>&nbsp;|&nbsp;<a href="https://dl.fbaipublicfiles.com/detr/logs/detr-r50-dc5_log.txt">logs</a></td>
-      <td>159Mb</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>DETR</td>
-      <td>R101</td>
-      <td>500</td>
-      <td>0.050</td>
-      <td>43.5</td>
-      <td><a href="https://dl.fbaipublicfiles.com/detr/detr-r101-2c7b67e5.pth">model</a>&nbsp;|&nbsp;<a href="https://dl.fbaipublicfiles.com/detr/logs/detr-r101_log.txt">logs</a></td>
-      <td>232Mb</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>DETR-DC5</td>
-      <td>R101</td>
-      <td>500</td>
-      <td>0.097</td>
-      <td>44.9</td>
-      <td><a href="https://dl.fbaipublicfiles.com/detr/detr-r101-dc5-a2e86def.pth">model</a>&nbsp;|&nbsp;<a href="https://dl.fbaipublicfiles.com/detr/logs/detr-r101-dc5_log.txt">logs</a></td>
-      <td>232Mb</td>
-    </tr>
-  </tbody>
-</table>
+<!---
 
-COCO val5k evaluation results can be found in this [gist](https://gist.github.com/szagoruyko/9c9ebb8455610958f7deaa27845d7918).
+Adeli, H., Ahn, S., Kriegeskorte, N., & Zelinsky, G. (2023). Affinity-based Attention in Self-supervised Transformers Predicts Dynamics of Object Grouping in Humans. arXiv preprint arXiv:2306.00294. [[arxiv](https://arxiv.org/abs/2306.00294)][[pdf](https://arxiv.org/pdf/2306.00294.pdf)]
 
-The models are also available via torch hub,
-to load DETR R50 with pretrained weights simply do:
-```python
-model = torch.hub.load('facebookresearch/detr:main', 'detr_resnet50', pretrained=True)
+
+Please cite our work by using the following BibTeX entry.
+
+``` bibtex
+@article{adeli2023affinity,
+  title={Affinity-based Attention in Self-supervised Transformers Predicts Dynamics of Object Grouping in Humans},
+  author={Adeli, Hossein and Ahn, Seoyoung and Kriegeskorte, Nikolaus and Zelinsky, Gregory},
+  journal={arXiv preprint arXiv:2306.00294},
+  year={2023}
+}
+``` 
+Comments are Fun --->
+ 
+[Hossein Adeli](https://hosseinadeli.github.io/)
+ha2366@columbia.edu
+
+## Training the model
+
+You can train the model using the code below. 
+
+```bash
+python main.py --run 1  --subj 1 --enc_output_layer 1 --readout_res 'streams_inc'
+```
+The model can accept many parameters for the run. Here the run number is given, the subject number, which encoder layer output should be fed to the decoder, and what type of queries should the transformer decocder be using. 
+
+With 'streams_inc', all the vertices are predicted using queries for all the streams. You can use the visualize_results.ipynb to see the results after they are saved. 
+
+Results from a sample run for subj 1:
+<img src="https://raw.githubusercontent.com/Hosseinadeli/affinity_attention/main/figures/human_behavior/exp_paradigm.png" width = 350> 
+
+## Behavioral paradigm and datasets: 
+
+                                    <img src="https://raw.githubusercontent.com/Hosseinadeli/affinity_attention/main/figures/human_behavior/sample_trials.png" width = 300>
+
+Refer to the paper for the details of the behavrioal paradigm. 
+
+This [google drive folder](https://drive.google.com/drive/folders/10uXagNPxcPWh6YZgpCmBP_czUmxxXKWG?usp=sharing) includes all the experimental images:
+**display_images** : This folder contains the images used in the experiment. All selected from COCO 2017 validation set. 
+**display_images_with dots** : This folder contains the images used in the experiment with the four versions of dot placements. 
+
+* **Behavioral dataset**:
+datasets -> datasets_grouping -> test_data_groupiong.xls : This excel file contains the info for all the 1020 experimental trials. Each row specified one trial with these info:
+
+['img_id',
+ 'img_name',
+ 'same_diff',
+ 'close_far',
+ 'first_dot_xy',
+ 'second_dot_xy',
+ 'same_object_anns_ind',
+ 'diff_object_anns_ind',
+ 'distance',
+ 'Img_shape']
+
+**datasets -> datasets_grouping -> train_data_groupiong.xls** : We applied our dot placement algorithm to the COCO 2017 training set in order to select many more trials. If you intend to train your model on the same-different task use this file. The images are completely separate from the images used in the experiment. The file contains the same info with the same format as the test_data_grouping.xls. 
+
+**datasets -> loaddata_g.py** : This file can read in the excel files for testing and training and give you a pytorch dataloader with the below function:  
+
+```bash
+fetch_dataloader(args, batch_size, train='train', shuffle=True)
 ```
 
+The args needs to have these components: 
+args.batch_size – set as 1 because images have different sizes 
+args.resize – whether to resize the images - only in use when running detr 
+args.coco2017_path  – path to coco, have to be downloaded separately 
+args.dataset_grouping_dir  - this is the folder where the xls files are
 
-COCO panoptic val5k models:
-<table>
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>backbone</th>
-      <th>box AP</th>
-      <th>segm AP</th>
-      <th>PQ</th>
-      <th>url</th>
-      <th>size</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>DETR</td>
-      <td>R50</td>
-      <td>38.8</td>
-      <td>31.1</td>
-      <td>43.4</td>
-      <td><a href="https://dl.fbaipublicfiles.com/detr/detr-r50-panoptic-00ce5173.pth">download</a></td>
-      <td>165Mb</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>DETR-DC5</td>
-      <td>R50</td>
-      <td>40.2</td>
-      <td>31.9</td>
-      <td>44.6</td>
-      <td><a href="https://dl.fbaipublicfiles.com/detr/detr-r50-dc5-panoptic-da08f1b1.pth">download</a></td>
-      <td>165Mb</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>DETR</td>
-      <td>R101</td>
-      <td>40.1</td>
-      <td>33</td>
-      <td>45.1</td>
-      <td><a href="https://dl.fbaipublicfiles.com/detr/detr-r101-panoptic-40021d53.pth">download</a></td>
-      <td>237Mb</td>
-    </tr>
-  </tbody>
-</table>
+**utils for display images and dot locations.ipynb** : Some useful stuff to play around the display images and plot them. 
 
-Checkout our [panoptic colab](https://colab.research.google.com/github/facebookresearch/detr/blob/colab/notebooks/DETR_panoptic.ipynb)
-to see how to use and visualize DETR's panoptic segmentation prediction.
+**datasets -> datasets_grouping -> Human_grouping_data.xls** : This is the main file containing raw behavioral data. We have 72 subjects in total. 
 
-# Notebooks
+['RECORDING_SESSION_LABEL',
+ 'Trial_Index_',
+ 'subj_id',
+ 'trial_id',
+ 'block_id',
+ 'trial_id_block',
+ 'trial_type',
+ 'image_id',
+ 'img_id',
+ 'image',
+ 'image_dims',
+ 'target',
+ 'same_diff',
+ 'close_far',
+ 'first_dot_xy',
+ 'second_dot_xy',
+ 'first_dot_to_image',
+ 'first_dot_to_second_dot',
+ 'soa',
+ 'same_button',
+ 'REACTION_TIME',
+ 'RT_EVENT_BUTTON_ID']
 
-We provide a few notebooks in colab to help you get a grasp on DETR:
-* [DETR's hands on Colab Notebook](https://colab.research.google.com/github/facebookresearch/detr/blob/colab/notebooks/detr_attention.ipynb): Shows how to load a model from hub, generate predictions, then visualize the attention of the model (similar to the figures of the paper)
-* [Standalone Colab Notebook](https://colab.research.google.com/github/facebookresearch/detr/blob/colab/notebooks/detr_demo.ipynb): In this notebook, we demonstrate how to implement a simplified version of DETR from the grounds up in 50 lines of Python, then visualize the predictions. It is a good starting point if you want to gain better understanding the architecture and poke around before diving in the codebase.
-* [Panoptic Colab Notebook](https://colab.research.google.com/github/facebookresearch/detr/blob/colab/notebooks/DETR_panoptic.ipynb): Demonstrates how to use DETR for panoptic segmentation and plot the predictions.
+**preprocess behavioral data.ipynb** : Use this notebook to preprocess the behavioral data. The preprocessed files (test_data_grouping_with_all_beh.xls, test_data_grouping_with_mean_beh.xls, df_beh_c.xls) are in the datasets -> datasets_grouping folder so no need to run this file, unless you want to change something. 
+
+**human behavior analyses.ipynb** : This notebook takes in the preprocessed files and analyzes the RTs and percentiles. It also calculates the subject-subject agreements and plots some sample trials with average RTs from subjects. 
 
 
-# Usage - Object detection
-There are no extra compiled components in DETR and package dependencies are minimal,
-so the code is very simple to use. We provide instructions how to install dependencies via conda.
-First, clone the repository locally:
-```
-git clone https://github.com/facebookresearch/detr.git
-```
-Then, install PyTorch 1.5+ and torchvision 0.6+:
-```
-conda install -c pytorch pytorch torchvision
-```
-Install pycocotools (for evaluation on COCO) and scipy (for training):
-```
-conda install cython scipy
-pip install -U 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
-```
-That's it, should be good to train and evaluate detection models.
+## Evaluation 
 
-(optional) to work with panoptic install panopticapi:
-```
-pip install git+https://github.com/cocodataset/panopticapi.git
-```
+<img src="https://raw.githubusercontent.com/Hosseinadeli/affinity_attention/main/figures/results/ROC_curve_sorted_sim.png" width = 375><img src="https://raw.githubusercontent.com/Hosseinadeli/affinity_attention/main/figures/results/model_human_rt_comp_sim.png" width = 300>
 
-## Data preparation
+**model results analyses.ipynb**: This notebook inputs the output runs and can plot the ROC curves for the object-centric measure. It can also compare each model ouput with the subjecs.
 
-Download and extract COCO 2017 train and val images with annotations from
-[http://cocodataset.org](http://cocodataset.org/#download).
-We expect the directory structure to be the following:
-```
-path/to/coco/
-  annotations/  # annotation json files
-  train2017/    # train images
-  val2017/      # val images
-```
+The ntoebook also shows hwo to plot the output number of steps for a given run. 
 
-## Training
-To train baseline DETR on a single node with 8 gpus for 300 epochs run:
-```
-python -m torch.distributed.launch --nproc_per_node=8 --use_env main.py --coco_path /path/to/coco 
-```
-A single epoch takes 28 minutes, so 300 epoch training
-takes around 6 days on a single machine with 8 V100 cards.
-To ease reproduction of our results we provide
-[results and training logs](https://gist.github.com/szagoruyko/b4c3b2c3627294fc369b899987385a3f)
-for 150 epoch schedule (3 days on a single machine), achieving 39.5/60.3 AP/AP50.
-
-We train DETR with AdamW setting learning rate in the transformer to 1e-4 and 1e-5 in the backbone.
-Horizontal flips, scales and crops are used for augmentation.
-Images are rescaled to have min size 800 and max size 1333.
-The transformer is trained with dropout of 0.1, and the whole model is trained with grad clip of 0.1.
+<img src="https://raw.githubusercontent.com/Hosseinadeli/affinity_attention/main/figures/results/model_steps_hist_q_8_supp.png" width = 475><img src="https://raw.githubusercontent.com/Hosseinadeli/affinity_attention/main/figures/results/model_steps_q_8_supp.png" width = 250>
 
 
-## Evaluation
-To evaluate DETR R50 on COCO val5k with a single GPU run:
-```
-python main.py --batch_size 2 --no_aux_loss --eval --resume https://dl.fbaipublicfiles.com/detr/detr-r50-e632da11.pth --coco_path /path/to/coco
-```
-We provide results for all DETR detection models in this
-[gist](https://gist.github.com/szagoruyko/9c9ebb8455610958f7deaa27845d7918).
-Note that numbers vary depending on batch size (number of images) per GPU.
-Non-DC5 models were trained with batch size 2, and DC5 with 1,
-so DC5 models show a significant drop in AP if evaluated with more
-than 1 image per GPU.
+<!-- ### Repo map
 
-## Multinode training
-Distributed training is available via Slurm and [submitit](https://github.com/facebookincubator/submitit):
-```
-pip install submitit
-```
-Train baseline DETR-6-6 model on 4 nodes for 300 epochs:
-```
-python run_with_submitit.py --timeout 3000 --coco_path /path/to/coco
-```
+```bash
+├── ops                         # Functional operators
+    └ ...
+├── components                  # Parts zoo, any of which can be used directly
+│   ├── attention
+│   │    └ ...                  # all the supported attentions
+│   ├── feedforward             #
+│   │    └ ...                  # all the supported feedforwards
+│   ├── positional_embedding    #
+│   │    └ ...                  # all the supported positional embeddings
+│   ├── activations.py          #
+│   └── multi_head_dispatch.py  # (optional) multihead wrap
+|
+├── benchmarks
+│     └ ...                     # A lot of benchmarks that you can use to test some parts
+└── triton
+      └ ...                     # (optional) all the triton parts, requires triton + CUDA gpu
+``` -->
+## Credits
 
-# Usage - Segmentation
+The following repositories were used, either in close to original form or as an inspiration:
 
-We show that it is relatively straightforward to extend DETR to predict segmentation masks. We mainly demonstrate strong panoptic segmentation results.
-
-## Data preparation
-
-For panoptic segmentation, you need the panoptic annotations additionally to the coco dataset (see above for the coco dataset). You need to download and extract the [annotations](http://images.cocodataset.org/annotations/panoptic_annotations_trainval2017.zip).
-We expect the directory structure to be the following:
-```
-path/to/coco_panoptic/
-  annotations/  # annotation json files
-  panoptic_train2017/    # train panoptic annotations
-  panoptic_val2017/      # val panoptic annotations
-```
-
-## Training
-
-We recommend training segmentation in two stages: first train DETR to detect all the boxes, and then train the segmentation head.
-For panoptic segmentation, DETR must learn to detect boxes for both stuff and things classes. You can train it on a single node with 8 gpus for 300 epochs with:
-```
-python -m torch.distributed.launch --nproc_per_node=8 --use_env main.py --coco_path /path/to/coco  --coco_panoptic_path /path/to/coco_panoptic --dataset_file coco_panoptic --output_dir /output/path/box_model
-```
-For instance segmentation, you can simply train a normal box model (or used a pre-trained one we provide).
-
-Once you have a box model checkpoint, you need to freeze it, and train the segmentation head in isolation.
-For panoptic segmentation you can train on a single node with 8 gpus for 25 epochs:
-```
-python -m torch.distributed.launch --nproc_per_node=8 --use_env main.py --masks --epochs 25 --lr_drop 15 --coco_path /path/to/coco  --coco_panoptic_path /path/to/coco_panoptic  --dataset_file coco_panoptic --frozen_weights /output/path/box_model/checkpoint.pth --output_dir /output/path/segm_model
-```
-For instance segmentation only, simply remove the `dataset_file` and `coco_panoptic_path` arguments from the above command line.
-
-# License
-DETR is released under the Apache 2.0 license. Please see the [LICENSE](LICENSE) file for more information.
-
-# Contributing
-We actively welcome your pull requests! Please see [CONTRIBUTING.md](.github/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](.github/CODE_OF_CONDUCT.md) for more info.
-#   t r a n s f o r m e r _ a t t e n t i o n _ g r o u p i n g  
- 
+1) [facebookresearch/dinov2](https://github.com/facebookresearch/dinov2) <br/>
+2) [facebookresearch/dino](https://github.com/facebookresearch/dino) <br/>
+3) [facebookresearch/detr](https://github.com/facebookresearch/detr) <br/>
+4) [huggingface/pytorch-image-models](https://github.com/huggingface/pytorch-image-models) <br/>
