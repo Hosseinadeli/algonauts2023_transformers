@@ -40,9 +40,9 @@ You can train the model using the code below.
 ```bash
 python main.py --run 1  --subj 1 --enc_output_layer 1 --readout_res 'streams_inc'
 ```
-The model can accept many parameters for the run. Here the run number is given, the subject number, which encoder layer output should be fed to the decoder ([-1] in this case), and what type of queries should the transformer decocder be using. 
+The model can accept many parameters for the run. Here the run number is given, the subject number, which encoder layer output should be fed to the decoder ([-1] in this case), and what type of queries should the transformer decoder be using. 
 
-With 'streams_inc', all the vertices are predicted using queries for all the streams. enc_output_layer specified which laer  You can use the visualize_results.ipynb to see the results after they are saved. 
+With 'streams_inc', all the vertices are predicted using queries for all the streams. You can use the visualize_results.ipynb to see the results after they are saved. 
 
 Results from a sample run for subj 1:
 
