@@ -30,7 +30,7 @@ Please cite our work by using the following BibTeX entry.
 ``` 
 Comments are Fun --->
  
-[Hossein Adeli](https://hosseinadeli.github.io/)\\
+[Hossein Adeli](https://hosseinadeli.github.io/)<br />
 ha2366@columbia.edu
 
 ## Training the model
