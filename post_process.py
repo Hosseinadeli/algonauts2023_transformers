@@ -134,26 +134,13 @@ for subj in [subject_ind]: # [1]: #
     fmri_dir = os.path.join(args.data_dir, 'training_split', 'training_fmri')
     lh_fmri = np.load(os.path.join(fmri_dir, 'lh_training_fmri.npy'))
     rh_fmri = np.load(os.path.join(fmri_dir, 'rh_training_fmri.npy'))
-    
-    saved_feats_dir = '../../algonauts_image_features/'
-
-    dino_feat_dir = saved_feats_dir + '/dinov2_q_last_100pc/'+ args.subj
-    clip_feat_dir = saved_feats_dir + '/clip_vit_100pc/'+ args.subj
-
-    fts_dino = np.load(dino_feat_dir + '/train.npy')
-    fts_clip = np.load(clip_feat_dir + '/train.npy')
+  
     
     
-    fts_dino_test = np.load(dino_feat_dir + '/test.npy')
-    fts_clip_test = np.load(clip_feat_dir + '/test.npy')
-    
-    
-    for readout_res in ['savedfeats_streams_inc', 'streams_inc', 'visuals', 'bodies', 'places', 'faces', 'words']: # ,     'streams_inc']:
+    for readout_res in ['streams_inc', 'visuals', 'bodies', 'places', 'faces', 'words']:
     
         if readout_res == 'streams_inc':
             selected_layers = [1,2,3,4,5,6]
-        elif readout_res == 'savedfeats_streams_inc':
-            selected_layers = [1]
         elif readout_res == 'visuals':
             selected_layers = [5,6,7,8,9]
         elif readout_res == 'bodies':
@@ -307,21 +294,10 @@ for subj in [subject_ind]: # [1]: #
                 clip_fts_val = fts_clip_train[idxs_runs_val]
 
                 # concatenate beh features
-#                 lh_features_train = np.concatenate((lh_features_train,beh_res_train), 1)
-#                 lh_features_val = np.concatenate((lh_features_val, beh_res_val), 1)
-
-#                 rh_features_train = np.concatenate((rh_features_train,beh_res_train), 1)
-#                 rh_features_val = np.concatenate((rh_features_val, beh_res_val), 1)
+             
+                rh_features_train = np.concatenate((rh_features_train,beh_res_train), 1)
+                rh_features_val = np.concatenate((rh_features_val, beh_res_val), 1)
                 
-                
-#                 lh_features_train = np.concatenate((lh_features_train,beh_res_train, dino_fts_train, clip_fts_train), 1)
-#                 lh_features_val = np.concatenate((lh_features_val, beh_res_val, dino_fts_val, clip_fts_val), 1)
-
-#                 rh_features_train = np.concatenate((rh_features_train,beh_res_train, dino_fts_train, clip_fts_train), 1)
-#                 rh_features_val = np.concatenate((rh_features_val, beh_res_val, dino_fts_val, clip_fts_val), 1)
-
-
-
                 lh_fmri_train = lh_fmri_val_runs_pca[idxs_runs_train]
                 lh_fmri_val = lh_fmri_val_runs[idxs_runs_val]
 
@@ -436,16 +412,12 @@ for subj in [subject_ind]: # [1]: #
                     lh_fmri_test_pred_m = np.load(subj_res_dir + 'lh_pred_test.npy')
                     rh_fmri_test_pred_m = np.load(subj_res_dir + 'rh_pred_test.npy')
 
-
                     lh_fmri_test_pred_m_pca = pca_lh.transform(lh_fmri_test_pred_m)
                     rh_fmri_test_pred_m_pca = pca_rh.transform(rh_fmri_test_pred_m)
 
                     lh_features_test = lh_fmri_test_pred_m_pca # np.concatenate((lh_fmri_test_pred_m_pca, beh_test), 1)
                     rh_features_test = rh_fmri_test_pred_m_pca # np.concatenate((rh_fmri_test_pred_m_pca, beh_test), 1)
-                    
-#                     lh_features_test = np.concatenate((lh_fmri_test_pred_m_pca, beh_test, fts_dino_test, fts_clip_test), 1)
-#                     rh_features_test = np.concatenate((rh_fmri_test_pred_m_pca, beh_test, fts_dino_test, fts_clip_test), 1)
-
+                  
                     lh_fmri_test_pred_pca = reg_lh.predict(lh_features_test)
                     rh_fmri_test_pred_pca = reg_rh.predict(rh_features_test)
 
