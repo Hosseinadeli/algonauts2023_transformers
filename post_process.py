@@ -258,10 +258,7 @@ for subj in [subject_ind]: # [1]: #
             pca_rh.fit(rh_fmri_val_pred_runs)
 
             rh_fmri_val_pred_runs_pca = pca_rh.transform(rh_fmri_val_pred_runs)
-            
-            
-            fts_dino_train = fts_dino[idxs_val_runs]         
-            fts_clip_train = fts_clip[idxs_val_runs]
+     
 
 
             lh_pred_test = []
@@ -276,8 +273,6 @@ for subj in [subject_ind]: # [1]: #
                 num_train = int(np.round(len(idxs_runs) / 100 * 90))
                 idxs_runs_train, idxs_runs_val = idxs_runs[:num_train], idxs_runs[num_train:]
 
-
-
                 beh_res_train = beh_res[idxs_runs_train]
                 beh_res_val = beh_res[idxs_runs_val]
 
@@ -287,11 +282,6 @@ for subj in [subject_ind]: # [1]: #
                 rh_features_train = rh_fmri_val_pred_runs_pca[idxs_runs_train]
                 rh_features_val = rh_fmri_val_pred_runs_pca[idxs_runs_val]
                 
-                dino_fts_train = fts_dino_train[idxs_runs_train]
-                dino_fts_val = fts_dino_train[idxs_runs_val]
-
-                clip_fts_train = fts_clip_train[idxs_runs_train]
-                clip_fts_val = fts_clip_train[idxs_runs_val]
 
                 # concatenate beh features
              
@@ -321,7 +311,6 @@ for subj in [subject_ind]: # [1]: #
                 rh_fmri_val_pred = reg_rh.predict(rh_features_val)
                 #     rh_fmri_test_pred = reg_rh.predict(features_test)
                 
-
 
                 lh_fmri_val_pred = pca_fmri_lh.inverse_transform(lh_fmri_val_pred)
                 lh_fmri_val_pred.shape
@@ -407,7 +396,6 @@ for subj in [subject_ind]: # [1]: #
                 for run in range(1,11):
 
                     subj_res_dir = test_save_dir + '/run' + str(run) + '/'
-
 
                     lh_fmri_test_pred_m = np.load(subj_res_dir + 'lh_pred_test.npy')
                     rh_fmri_test_pred_m = np.load(subj_res_dir + 'rh_pred_test.npy')
