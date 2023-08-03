@@ -33,6 +33,11 @@ Comments are Fun --->
 [Hossein Adeli](https://hosseinadeli.github.io/)<br />
 ha2366@columbia.edu
 
+
+## Model Architecture
+
+<img src="https://raw.githubusercontent.com/Hosseinadeli/algonauts2023_transformers/main/figures/model_architecture.jpg" width = 1000> 
+
 ## Training the model
 
 You can train the model using the code below. 
