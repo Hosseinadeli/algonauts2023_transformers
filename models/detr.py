@@ -166,62 +166,62 @@ class DETR(nn.Module):
             self.rh_embed_0 = nn.Sequential(
                 nn.Linear(feature_dim, rh_vs),
             )
-            #stream 1
-            self.lh_embed_1 = nn.Sequential(
-                nn.Linear(feature_dim, lh_vs),
-            )
+            # #stream 1
+            # self.lh_embed_1 = nn.Sequential(
+            #     nn.Linear(feature_dim, lh_vs),
+            # )
 
-            self.rh_embed_1 = nn.Sequential(
-                nn.Linear(feature_dim, rh_vs),
-            )
-            #stream 2
-            self.lh_embed_2 = nn.Sequential(
-                nn.Linear(feature_dim, lh_vs),
-            )
+            # self.rh_embed_1 = nn.Sequential(
+            #     nn.Linear(feature_dim, rh_vs),
+            # )
+            # #stream 2
+            # self.lh_embed_2 = nn.Sequential(
+            #     nn.Linear(feature_dim, lh_vs),
+            # )
 
-            self.rh_embed_2 = nn.Sequential(
-                nn.Linear(feature_dim, rh_vs),
-            )
-            #stream 3
-            self.lh_embed_3 = nn.Sequential(
-                nn.Linear(feature_dim, lh_vs),
-            )
+            # self.rh_embed_2 = nn.Sequential(
+            #     nn.Linear(feature_dim, rh_vs),
+            # )
+            # #stream 3
+            # self.lh_embed_3 = nn.Sequential(
+            #     nn.Linear(feature_dim, lh_vs),
+            # )
 
-            self.rh_embed_3 = nn.Sequential(
-                nn.Linear(feature_dim, rh_vs),
-            )
-             #stream 4
-            self.lh_embed_4 = nn.Sequential(
-                nn.Linear(feature_dim, lh_vs),
-            )
+            # self.rh_embed_3 = nn.Sequential(
+            #     nn.Linear(feature_dim, rh_vs),
+            # )
+            #  #stream 4
+            # self.lh_embed_4 = nn.Sequential(
+            #     nn.Linear(feature_dim, lh_vs),
+            # )
 
-            self.rh_embed_4 = nn.Sequential(
-                nn.Linear(feature_dim, rh_vs),
-            )
-            #stream 5
-            self.lh_embed_5 = nn.Sequential(
-                nn.Linear(feature_dim, lh_vs),
-            )
+            # self.rh_embed_4 = nn.Sequential(
+            #     nn.Linear(feature_dim, rh_vs),
+            # )
+            # #stream 5
+            # self.lh_embed_5 = nn.Sequential(
+            #     nn.Linear(feature_dim, lh_vs),
+            # )
 
-            self.rh_embed_5 = nn.Sequential(
-                nn.Linear(feature_dim, rh_vs),
-            )
-            #stream 6
-            self.lh_embed_6 = nn.Sequential(
-                nn.Linear(feature_dim, lh_vs),
-            )
+            # self.rh_embed_5 = nn.Sequential(
+            #     nn.Linear(feature_dim, rh_vs),
+            # )
+            # #stream 6
+            # self.lh_embed_6 = nn.Sequential(
+            #     nn.Linear(feature_dim, lh_vs),
+            # )
 
-            self.rh_embed_6 = nn.Sequential(
-                nn.Linear(feature_dim, rh_vs),
-            )
-            #stream 7 
-            self.lh_embed_7 = nn.Sequential(
-                nn.Linear(feature_dim, lh_vs),
-            )
+            # self.rh_embed_6 = nn.Sequential(
+            #     nn.Linear(feature_dim, rh_vs),
+            # )
+            # #stream 7 
+            # self.lh_embed_7 = nn.Sequential(
+            #     nn.Linear(feature_dim, lh_vs),
+            # )
 
-            self.rh_embed_7 = nn.Sequential(
-                nn.Linear(feature_dim, rh_vs),
-            )   
+            # self.rh_embed_7 = nn.Sequential(
+            #     nn.Linear(feature_dim, rh_vs),
+            # )   
         
         
         
@@ -375,22 +375,22 @@ class DETR(nn.Module):
         else: #if self.readout_res == 'streams':
 
             lh_f_pred_0 = self.lh_embed_0(output_tokens[:,0,:])
-            lh_f_pred_1 = self.lh_embed_1(output_tokens[:,1,:])
-            lh_f_pred_2 = self.lh_embed_2(output_tokens[:,2,:])
-            lh_f_pred_3 = self.lh_embed_3(output_tokens[:,3,:])
-            lh_f_pred_4 = self.lh_embed_4(output_tokens[:,4,:])
-            lh_f_pred_5 = self.lh_embed_5(output_tokens[:,5,:])
-            lh_f_pred_6 = self.lh_embed_6(output_tokens[:,6,:])
-            lh_f_pred_7 = self.lh_embed_7(output_tokens[:,7,:])
+            lh_f_pred_1 = self.lh_embed_0(output_tokens[:,1,:])
+            lh_f_pred_2 = self.lh_embed_0(output_tokens[:,2,:])
+            lh_f_pred_3 = self.lh_embed_0(output_tokens[:,3,:])
+            lh_f_pred_4 = self.lh_embed_0(output_tokens[:,4,:])
+            lh_f_pred_5 = self.lh_embed_0(output_tokens[:,5,:])
+            lh_f_pred_6 = self.lh_embed_0(output_tokens[:,6,:])
+            lh_f_pred_7 = self.lh_embed_0(output_tokens[:,7,:])
 
             rh_f_pred_0 = self.rh_embed_0(output_tokens[:,8,:])
-            rh_f_pred_1 = self.rh_embed_1(output_tokens[:,9,:])
-            rh_f_pred_2 = self.rh_embed_2(output_tokens[:,10,:])
-            rh_f_pred_3 = self.rh_embed_3(output_tokens[:,11,:])
-            rh_f_pred_4 = self.rh_embed_4(output_tokens[:,12,:])
-            rh_f_pred_5 = self.rh_embed_5(output_tokens[:,13,:])
-            rh_f_pred_6 = self.rh_embed_6(output_tokens[:,14,:])
-            rh_f_pred_7 = self.rh_embed_7(output_tokens[:,15,:])
+            rh_f_pred_1 = self.rh_embed_0(output_tokens[:,9,:])
+            rh_f_pred_2 = self.rh_embed_0(output_tokens[:,10,:])
+            rh_f_pred_3 = self.rh_embed_0(output_tokens[:,11,:])
+            rh_f_pred_4 = self.rh_embed_0(output_tokens[:,12,:])
+            rh_f_pred_5 = self.rh_embed_0(output_tokens[:,13,:])
+            rh_f_pred_6 = self.rh_embed_0(output_tokens[:,14,:])
+            rh_f_pred_7 = self.rh_embed_0(output_tokens[:,15,:])
 
             lh_f_pred = torch.stack((lh_f_pred_0, lh_f_pred_1, lh_f_pred_2,lh_f_pred_3,lh_f_pred_4,lh_f_pred_5,lh_f_pred_6,lh_f_pred_7), dim=2)
 
