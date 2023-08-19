@@ -155,6 +155,8 @@ def get_args_parser():
     parser.add_argument('--eval', action='store_true')
     parser.add_argument('--num_workers', default=2, type=int)
 
+    parser.add_argument('--save_model', default=0, type=int) 
+
     # distributed training parameters
     parser.add_argument('--world_size', default=1, type=int,
                         help='number of distributed processes')
@@ -562,7 +564,7 @@ def main(args):
                 with open(os.path.join(args.save_dir, 'val_results.txt'), 'a') as f:
                     f.write(f'epoch {epoch}, val_mean_corr: {val_mean_corr}, val_loss: {val_loss} \n') 
         
-                if args.run == 21:
+                if args.save_model:
                     for checkpoint_path in checkpoint_paths:
                         utils.save_on_master({
                             'model': model.state_dict(),
