@@ -64,9 +64,18 @@ Results from a sample run for subj 1:
 
 <img src="https://raw.githubusercontent.com/Hosseinadeli/algonauts2023_transformers/main/figures/detr_dino_8_visuals_16.png" width = 1000> 
 
+
+Final prediction results (from http://algonauts.csail.mit.edu/visualizations_2023/02_hosseinadeli.png):
+
+<img src="https://raw.githubusercontent.com/Hosseinadeli/algonauts2023_transformers/main/figures/02_hosseinadeli.png" width = 1000> 
+
 ## Attention maps
 
+```bash
+python main.py --run 1  --subj 1 --enc_output_layer 1 --readout_res 'faces' --save_model 1
+```
 
+Save the model check point. attention_maps.ipynb can then be used to visualize the attention weights for the decoder queries (where each query attends to in the image in order to predict an ROI).  
 
 <img src="https://raw.githubusercontent.com/Hosseinadeli/algonauts2023_transformers/main/figures/attention_maps.png" width = 700> 
 
