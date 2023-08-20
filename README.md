@@ -67,12 +67,11 @@ Results from a sample run for subj 1:
 ## Attention maps
 
 
-Results from a sample run for subj 1:
 
-<img src="https://raw.githubusercontent.com/Hosseinadeli/algonauts2023_transformers/main/figures/attention_maps.png" width = 1000> 
+<img src="https://raw.githubusercontent.com/Hosseinadeli/algonauts2023_transformers/main/figures/attention_maps.png" width = 700> 
 
 
-<img src="https://raw.githubusercontent.com/Hosseinadeli/algonauts2023_transformers/main/figures/attention_maps_faces.png" width = 1000> 
+<img src="https://raw.githubusercontent.com/Hosseinadeli/algonauts2023_transformers/main/figures/attention_maps_face.png" width = 700> 
 
 <!-- ### Repo map
 
