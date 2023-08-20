@@ -1,34 +1,25 @@
-# Under construction 
 
 Our submission to the [Algonauts 2023 challenge](http://algonauts.csail.mit.edu/challenge.html). 
 
 [Challenge Leaderboard](https://codalab.lisn.upsaclay.fr/competitions/9304#results) 
-
 username: hosseinadeli
-
 
 ### Citing our work
 
-Report to be published soon
-
-Adeli, H., Sun, M., Kriegeskorte, N.
-
-<!---
-
-Adeli, H., Ahn, S., Kriegeskorte, N., & Zelinsky, G. (2023). Affinity-based Attention in Self-supervised Transformers Predicts Dynamics of Object Grouping in Humans. arXiv preprint arXiv:2306.00294. [[arxiv](https://arxiv.org/abs/2306.00294)][[pdf](https://arxiv.org/pdf/2306.00294.pdf)]
-
+Adeli, H., Minni, S., & Kriegeskorte, N. (2023). Predicting brain activity using Transformers. bioRxiv, 2023-08. [[bioRxiv](https://www.biorxiv.org/content/10.1101/2023.08.02.551743v1.abstract)]
 
 Please cite our work by using the following BibTeX entry.
 
 ``` bibtex
-@article{adeli2023affinity,
-  title={Affinity-based Attention in Self-supervised Transformers Predicts Dynamics of Object Grouping in Humans},
-  author={Adeli, Hossein and Ahn, Seoyoung and Kriegeskorte, Nikolaus and Zelinsky, Gregory},
-  journal={arXiv preprint arXiv:2306.00294},
-  year={2023}
+@article{adeli2023predicting,
+  title={Predicting brain activity using Transformers},
+  author={Adeli, Hossein and Minni, Sun and Kriegeskorte, Nikolaus},
+  journal={bioRxiv},
+  pages={2023--08},
+  year={2023},
+  publisher={Cold Spring Harbor Laboratory}
 }
 ``` 
-Comments are Fun --->
  
 [Hossein Adeli](https://hosseinadeli.github.io/)<br />
 ha2366@columbia.edu
