@@ -60,6 +60,14 @@ Final prediction results (from http://algonauts.csail.mit.edu/visualizations_202
 
 <img src="https://raw.githubusercontent.com/Hosseinadeli/algonauts2023_transformers/main/figures/02_hosseinadeli.png" width = 1000> 
 
+
+
+## model checkpoints
+
+Download model checkpoint from this [google drive folder](https://drive.google.com/drive/folders/1HMwl3GRm0vZmji4HOz5OeqRc0dp30V4b?usp=sharing):
+
+
+
 ## Attention maps
 
 ```bash
