@@ -62,6 +62,8 @@ Final prediction results (from http://algonauts.csail.mit.edu/visualizations_202
 
 
 
+
+
 ## model checkpoints
 
 Download model checkpoint from this [google drive folder](https://drive.google.com/drive/folders/1HMwl3GRm0vZmji4HOz5OeqRc0dp30V4b?usp=sharing):
