@@ -64,7 +64,15 @@ Results from a sample run for subj 1:
 
 <img src="https://raw.githubusercontent.com/Hosseinadeli/algonauts2023_transformers/main/figures/detr_dino_8_visuals_16.png" width = 1000> 
 
+## Attention maps
 
+
+Results from a sample run for subj 1:
+
+<img src="https://raw.githubusercontent.com/Hosseinadeli/algonauts2023_transformers/main/figures/attention_maps.png" width = 1000> 
+
+
+<img src="https://raw.githubusercontent.com/Hosseinadeli/algonauts2023_transformers/main/figures/attention_maps_faces.png" width = 1000> 
 
 <!-- ### Repo map
 
