@@ -414,7 +414,18 @@ def main(args):
                                       weight_decay=args.weight_decay)
         lr_scheduler = torch.optim.lr_scheduler.StepLR(optimizer, args.lr_drop)
 
+    else:
+        
+        param_dicts = [ 
+            { "params" : [ p for n , p in model.named_parameters() if p.requires_grad]}, ]  #n not in frozen_params and 
     
+        train_params = [ n for n , p in model.named_parameters() if p.requires_grad ]  # n not in frozen_params and
+
+        print('\ntrain_params', train_params)
+
+        optimizer = torch.optim.AdamW(param_dicts, lr=args.lr,
+                                      weight_decay=args.weight_decay)
+        lr_scheduler = torch.optim.lr_scheduler.StepLR(optimizer, args.lr_drop)
 
     train_dataloader, val_dataloader = fetch_dataloader(args, args.batch_size, train='train')
     test_dataloader = fetch_dataloader(args, args.batch_size, train='test')
