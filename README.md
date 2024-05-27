@@ -5,12 +5,6 @@
 <br/><br/><br/>
 
 
-
-
-
---------------------------------------------------------------------------------------------------
-
-
 Our submission to the [Algonauts 2023 challenge](http://algonauts.csail.mit.edu/challenge.html). 
 
 [Challenge Leaderboard](https://codalab.lisn.upsaclay.fr/competitions/9304#results) 
