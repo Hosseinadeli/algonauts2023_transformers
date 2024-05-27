@@ -1,7 +1,11 @@
 
 
 
-- ![#f03c15] ## Newer version of this repo is available here:   [transformer_brain_encoder](https://github.com/Hosseinadeli/transformer_brain_encoder)
+## <span style="color:red;"> Newer version of this repo is available here:   [transformer_brain_encoder](https://github.com/Hosseinadeli/transformer_brain_encoder)
+
+
+
+
 
 
 
