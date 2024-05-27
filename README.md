@@ -1,7 +1,8 @@
 
 
 
-## <span style="color:red;">Newer version of this repo is available here:   [transformer_brain_encoder](https://github.com/Hosseinadeli/transformer_brain_encoder)
+## <span style="color:red;">Newer version of this repo is available here:</span>
+   [transformer_brain_encoder](https://github.com/Hosseinadeli/transformer_brain_encoder)
 
 
 
