@@ -1,10 +1,11 @@
 
 
 
-# Newer version of thie repo is available here:   
-[transformer_brain_encoder](https://github.com/Hosseinadeli/transformer_brain_encoder)
+## Newer version of thie repo is available here:   [transformer_brain_encoder](https://github.com/Hosseinadeli/transformer_brain_encoder)
 
 
+
+--------------------------------------------------------------------------------------------------
 
 
 Our submission to the [Algonauts 2023 challenge](http://algonauts.csail.mit.edu/challenge.html). 
